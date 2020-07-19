@@ -12,7 +12,7 @@ var loading = Loading.service({
     background: 'rgba(0, 0, 0, 0.3)'
 });
 
-axios.defaults.headers.common["Authorization"] = localStorage.getItem("token")
+axios.defaults.headers.common["Authorization"] = localStorage.getItem("token") || ""
 axios.post("/api/checkStatus").then(res => {
     if(res.data.status == 1) {
         location.href = "/"
