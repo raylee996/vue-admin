@@ -45,7 +45,7 @@ export default {
                 username: getStore("remember") && getStore("username") ? getStore("username") : "",
                 password: getStore("remember") && getStore("password") ? getStore("password") : "",
                 checkPassword: getStore("remember") && getStore("password") ? getStore("password") : "",
-                remember: getStore("remember")
+                remember: getStore("remember") ? true : false
             },
             rules: {
                 username: [
