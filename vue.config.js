@@ -1,4 +1,13 @@
+var path = require("path")
+
 module.exports = {
+    configureWebpack: {
+        resolve: {
+            alias: {
+                "@": path.resolve(__dirname, "src")
+            }
+        }
+    },
     pages: {
         login: {
             entry: "src/login/main.js",
